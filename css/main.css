@@ -5,6 +5,9 @@
     font-size: 16px;
 
 }
+* {
+    box-sizing: border-box;
+}
 
 header {
     background-color: var(--background);
@@ -34,7 +37,7 @@ article {
     box-shadow: 1px 1px 5px;
     font-size: 1.5em;
     margin: 1em;
-    padding: 0.7em 10em;
+    padding: 0.7em 5em;
 }
 
 article img {
@@ -50,24 +53,30 @@ nav {
     /* background-color: var(--background);
     border: solid 0.15em var(--accent);
     border-radius: 0.3em; */
+    align-items: center;
     border-top: var(--accent) solid 0.15em;
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 1em;
-    padding: 0.5em;
+    padding: 2.5em;
+    gap: 1em;
 }
 nav > a {
     background-color: var(--accent);
     border: solid 0.12em black;
     border-radius: 0.3em;
     box-shadow: black 1px 1px 5px;
-    display: inline-block;
+    display: block;
     font-size: 1.5em;
     font-weight: bold;
     color: white;
-    padding: 0.5em 4em;
-    margin: 1em;
+    padding: 0.5em 3em;
+    margin: 1em 1em;
     text-decoration: none;
     text-shadow: black 1px 1px 5px;
+    text-align: center;
+    width: 250px;
 }
 nav > a:hover {
     background-color: var(--background);
@@ -146,3 +155,14 @@ html {
             
         }
 }
+
+@media (max-width: 768px) {
+    div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        aside.sidebar {
+            position: static;
+        }
+    }
